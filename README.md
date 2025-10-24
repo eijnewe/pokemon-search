@@ -1,82 +1,20 @@
-# 🔍 Pokemon Search Interface
+# 🤖 JavaScript i praktiken - Pokémon Search
 
-A beautiful, responsive web application for searching Pokemon information using the PokeAPI. Built with vanilla HTML, CSS, and JavaScript.
+Felsökning och bugfixande är en stor del av yrket som mjukvaruutvecklare. I den här uppgiften får du öva på att laga en trasig webbapplikation. .js-filen är baserad på en fullständig, fungerande version men det fattas några elementära delar för att appen ska fungera som tänkt. Läs och undersök koden noga, följ eventuella felmeddelanden i webbläsaren, lägg till det som fattas och skriv om koden vid behov. Lösningen kommer inte vara omedelbart uppenbar. Tillåt uppgiften ta den tid den behöver och försök att lära dig så mycket som möjligt av att läsa någon annans kod.
 
-## ✨ Features
+## ⭐️ Beskrivning
 
-- **Search Pokemon by name** - Enter any Pokemon name to get detailed information
-- **Beautiful UI** - Modern gradient design with smooth animations
-- **Responsive design** - Works perfectly on desktop and mobile devices
-- **Real-time search** - Instant results with loading states
-- **Detailed Pokemon info** - View ID, height, weight, types, and abilities
-- **Error handling** - Graceful handling of invalid searches
+Pokemon Search är ett sökgränssnitt som tar emot användarens input, gör ett fetch-anrop till [pokeapi.co](https://pokeapi.co/), hämtar ut relevant data ur responsen och skriver ut den på ett snyggt sätt i webbläsaren.
 
-## 🚀 How to Use
+## 💻 Förväntat resultat
 
-1. Open `index.html` in your web browser
-2. Enter a Pokemon name in the search field (e.g., "pikachu", "charizard", "mewtwo")
-3. Click "Go" or press Enter to search
-4. View the Pokemon's details including image, stats, and abilities
+- Fetch-anropet inkluderar användarens input och avisas inte av servern [(HTTP-responskoden ska vara 200 OK)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/200)
+- Responsen innehåller datan tillhörande den Pokémon som användaren har sökt efter
+- Datan visas upp nedtill i UI:t under formuläret, inklusive namn, bild, färdigheter m.m.
 
-## 🛠️ Technical Details
+## 🎁 Bonusuppgifter
 
-### Files Structure
-
-- `index.html` - Main HTML structure with search form
-- `main.js` - JavaScript logic for API calls and DOM manipulation
-- `style.css` - Modern CSS styling with gradients and animations
-
-### API Integration
-
-- Uses [PokeAPI](https://pokeapi.co/) for Pokemon data
-- Fetches Pokemon information by name or ID
-- Displays comprehensive Pokemon details including:
-  - Official artwork
-  - Pokemon ID number
-  - Height and weight (converted to meters/kilograms)
-  - Type(s)
-  - Abilities
-
-### Key Features
-
-- **Input validation** - Requires minimum 3 characters
-- **Loading states** - Shows "Searching..." during API calls
-- **Error handling** - Displays user-friendly error messages
-- **Case insensitive** - Works with any capitalization
-- **Smooth animations** - CSS transitions and keyframe animations
-
-## 🎨 Design Features
-
-- **Gradient backgrounds** - Beautiful color transitions
-- **Card-based layout** - Clean, modern Pokemon display cards
-- **Hover effects** - Interactive elements with smooth transitions
-- **Mobile responsive** - Optimized for all screen sizes
-- **Accessibility** - Proper semantic HTML and ARIA labels
-
-## 🔧 Development
-
-To run this project locally:
-
-1. Clone or download the repository
-2. Open `index.html` in a web browser
-3. No build process required - pure vanilla web technologies!
-
-## 📱 Browser Compatibility
-
-Works in all modern browsers that support:
-
-- ES6+ JavaScript features
-- CSS Grid and Flexbox
-- Fetch API
-- CSS Custom Properties
-
-## 🎯 Future Enhancements
-
-Potential improvements could include:
-
-- Pokemon type filtering
-- Search history
-- Favorites functionality
-- Evolution chain display
-- Move sets and stats
-- Comparison between Pokemon
+- Utforska [pokeapi.co](https://pokeapi.co/) efter andra endpoints eller andra sätt att filtrera sökresultaten.
+  - Kanske går det att söka på något annat än bara namn
+  - Kanske går det att utöka formuläret med fler sökmöjligheter
+- Experimentera med UI:t - andra layouter, färgteman, sätt att visa upp sökresultatet på etc.

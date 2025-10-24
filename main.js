@@ -1,7 +1,4 @@
-const BASE_URL = "https://pokeapi.co/api/v2/";
-
-const searchForm = document.querySelector("#search-form");
-const searchResults = document.querySelector(".search-results");
+const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
 
 async function searchPokemon(query) {
   if (!query.trim()) {
@@ -12,10 +9,9 @@ async function searchPokemon(query) {
   try {
     searchResults.innerHTML = "<p>Searching...</p>";
 
-    const response = await fetch(`${BASE_URL}pokemon/${query.toLowerCase()}`);
+    const response = await fetch(`${BASE_URL}`);
 
     if (!response.ok) {
-      throw new Error("Pokemon not found");
     }
 
     const pokemon = await response.json();
@@ -47,16 +43,10 @@ function displayPokemonResult(pokemon) {
             </div>
         </div>
     `;
-  searchResults.innerHTML = resultHTML;
 }
 
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const data = new FormData(e.target);
-  const query = data.get("search");
-
+searchForm.addEventListener("", (e) => {
   if (query && query.length > 2) {
-    searchPokemon(query);
   } else if (!query || query.length === 0) {
     searchResults.innerHTML = "<p>Enter a Pokemon name to search</p>";
   } else {
